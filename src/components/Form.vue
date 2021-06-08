@@ -37,9 +37,6 @@
         </div>
       </b-form-group>
       <br />
-      <!-- <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0"
-        >Remember me</b-form-checkbox
-      > -->
 
       <b-button type="submit" variant="primary">Save</b-button>
     </b-form>
@@ -76,17 +73,6 @@ export default {
       await this.$recaptchaLoaded();
       const token = await this.$recaptcha("save");
       console.log(token);
-
-      // let headers = new Headers();
-      // headers.append("Content-Type", "application/json");
-      // headers.append("Origin", "http://localhost:8086");
-      // headers.append("Access-Control-Allow-Credentials", "true");
-      // headers.append("GET", "POST", "OPTIONS");
-      // headers.append("Accept", "application/json");
-      // headers.append("Accept", "text/plain");
-      // headers.append("Accept", "*/*");
-      // var key = "6LfHRAwbAAAAABB3dlImlVHnHay9sWjMOYtWwrq0";
-      // console.log(JSON.parse(key));
 
       if (token) {
         fetch(
